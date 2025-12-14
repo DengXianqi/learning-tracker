@@ -1,0 +1,338 @@
+.createGoal {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Progress Steps */
+.progressSteps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: var(--spacing-2xl);
+  padding: 0 var(--spacing-xl);
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  position: relative;
+  z-index: 1;
+}
+
+.stepNumber {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  transition: all var(--transition-normal);
+}
+
+.stepLabel {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.stepActive .stepNumber {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+
+.stepActive .stepLabel {
+  color: var(--color-primary);
+}
+
+.stepComplete .stepNumber {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: white;
+}
+
+.stepLine {
+  position: absolute;
+  top: 18px;
+  left: calc(16.66% + 18px);
+  right: calc(16.66% + 18px);
+  height: 2px;
+  background: var(--color-border);
+  z-index: 0;
+}
+
+.stepLineProgress {
+  height: 100%;
+  background: var(--color-primary);
+  transition: width var(--transition-slow);
+}
+
+/* Step Content */
+.stepContent {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.stepHeader {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.stepIcon {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.stepHeader h2 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.stepHeader p {
+  color: var(--color-text-secondary);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+}
+
+/* Milestones */
+.milestonesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.milestoneItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.milestoneNumber {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.milestoneFields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.milestoneFields input {
+  background: var(--color-surface);
+}
+
+.removeMilestoneBtn {
+  background: none;
+  border: none;
+  padding: var(--spacing-xs);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.removeMilestoneBtn:hover {
+  background: rgb(239 68 68 / 0.1);
+  color: var(--color-danger);
+}
+
+.addMilestoneBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  width: 100%;
+  padding: var(--spacing-md);
+  background: none;
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.addMilestoneBtn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: rgb(79 70 229 / 0.05);
+}
+
+.milestoneHint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: rgb(79 70 229 / 0.05);
+  border-radius: var(--radius-md);
+  color: var(--color-primary);
+  font-size: 0.875rem;
+}
+
+/* Review Card */
+.reviewCard {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xl);
+}
+
+.reviewCard h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.reviewDescription {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+.reviewMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.reviewTag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.reviewMilestones {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--spacing-md);
+}
+
+.reviewMilestones h4 {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.reviewMilestones ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.reviewMilestones li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 0.9375rem;
+}
+
+.milestoneCheckbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.submitError {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: rgb(239 68 68 / 0.1);
+  border-radius: var(--radius-md);
+  color: var(--color-danger);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* Form Actions */
+.formActions {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+.formActions button:only-child {
+  margin-left: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .progressSteps {
+    padding: 0;
+  }
+
+  .stepLabel {
+    display: none;
+  }
+
+  .stepLine {
+    left: calc(25% + 18px);
+    right: calc(25% + 18px);
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .stepContent {
+    padding: var(--spacing-lg);
+  }
+
+  .milestoneItem {
+    flex-direction: column;
+  }
+
+  .formActions {
+    flex-direction: column-reverse;
+  }
+
+  .formActions button {
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

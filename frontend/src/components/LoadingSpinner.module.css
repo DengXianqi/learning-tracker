@@ -1,0 +1,113 @@
+.fullScreen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  z-index: 1000;
+}
+
+.spinner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sm {
+  width: 24px;
+  height: 24px;
+}
+
+.md {
+  width: 40px;
+  height: 40px;
+}
+
+.lg {
+  width: 60px;
+  height: 60px;
+}
+
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: var(--color-primary);
+  animation: spin 1.2s linear infinite;
+}
+
+.sm .ring {
+  width: 24px;
+  height: 24px;
+  border-width: 2px;
+}
+
+.md .ring {
+  width: 40px;
+  height: 40px;
+}
+
+.lg .ring {
+  width: 60px;
+  height: 60px;
+  border-width: 4px;
+}
+
+.ring:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.ring:nth-child(2) {
+  animation-delay: 0.15s;
+  opacity: 0.8;
+}
+
+.ring:nth-child(3) {
+  animation-delay: 0.3s;
+  opacity: 0.6;
+}
+
+.sm .ring:nth-child(2) {
+  width: 18px;
+  height: 18px;
+}
+
+.sm .ring:nth-child(3) {
+  width: 12px;
+  height: 12px;
+}
+
+.md .ring:nth-child(2) {
+  width: 30px;
+  height: 30px;
+}
+
+.md .ring:nth-child(3) {
+  width: 20px;
+  height: 20px;
+}
+
+.lg .ring:nth-child(2) {
+  width: 46px;
+  height: 46px;
+}
+
+.lg .ring:nth-child(3) {
+  width: 32px;
+  height: 32px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.text {
+  margin-top: var(--spacing-lg);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}

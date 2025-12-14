@@ -1,0 +1,339 @@
+.goalDetail {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.notFound {
+  text-align: center;
+  padding: var(--spacing-2xl);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.backLink:hover {
+  color: var(--color-primary);
+}
+
+.headerActions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+/* Goal Info */
+.goalInfo {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.goalHeader {
+  margin-bottom: var(--spacing-lg);
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: var(--radius-full);
+  text-transform: capitalize;
+  margin-bottom: var(--spacing-md);
+}
+
+.badgeActive {
+  background: rgb(79 70 229 / 0.1);
+  color: var(--color-primary);
+}
+
+.badgeCompleted {
+  background: rgb(16 185 129 / 0.1);
+  color: var(--color-secondary);
+}
+
+.badgePaused {
+  background: rgb(245 158 11 / 0.1);
+  color: var(--color-accent);
+}
+
+.badgeCancelled {
+  background: rgb(239 68 68 / 0.1);
+  color: var(--color-danger);
+}
+
+.goalHeader h1 {
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.goalDescription {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.goalMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+/* Progress Section */
+.progressSection {
+  margin-top: var(--spacing-md);
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.progressPercent {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+}
+
+.progressBar {
+  height: 12px;
+  background: var(--color-bg);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+  border-radius: var(--radius-full);
+  transition: width 0.5s ease-out;
+}
+
+/* Edit Form */
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.editFormRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+}
+
+.editActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+/* Milestones Section */
+.milestonesSection {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+}
+
+.milestonesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.milestonesHeader h2 {
+  font-size: 1.25rem;
+}
+
+/* Add Milestone Form */
+.addMilestoneForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-lg);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.addMilestoneActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+}
+
+/* Milestones List */
+.milestonesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.milestoneItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.milestoneItem:hover {
+  background: var(--color-border);
+}
+
+.milestoneCompleted {
+  opacity: 0.7;
+}
+
+.milestoneCompleted .milestoneTitle {
+  text-decoration: line-through;
+}
+
+.milestoneCelebrate {
+  animation: celebrate 0.5s ease-out;
+}
+
+@keyframes celebrate {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); background: rgb(16 185 129 / 0.1); }
+  100% { transform: scale(1); }
+}
+
+.milestoneCheckbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+  color: white;
+}
+
+.milestoneCheckbox:hover {
+  border-color: var(--color-primary);
+}
+
+.milestoneCompleted .milestoneCheckbox {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.milestoneContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.milestoneTitle {
+  font-weight: 500;
+}
+
+.milestoneDescription {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.milestoneCompletedAt {
+  font-size: 0.75rem;
+  color: var(--color-secondary);
+}
+
+.milestoneDelete {
+  background: none;
+  border: none;
+  padding: var(--spacing-xs);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  opacity: 0;
+  transition: all var(--transition-fast);
+}
+
+.milestoneItem:hover .milestoneDelete {
+  opacity: 1;
+}
+
+.milestoneDelete:hover {
+  background: rgb(239 68 68 / 0.1);
+  color: var(--color-danger);
+}
+
+.emptyMilestones {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--color-text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+
+  .editFormRow {
+    grid-template-columns: 1fr;
+  }
+
+  .milestoneDelete {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
