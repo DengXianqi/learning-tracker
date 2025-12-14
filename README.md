@@ -292,7 +292,7 @@ CREATE TABLE milestones (
 
 ## 📹 Demo Video
 
-[Watch the demo video](link-to-your-video) showcasing:
+[Watch the demo video](https://github.com/DengXianqi/learning-tracker/blob/main/bandicam%202025-12-14%2014-17-23-356.mp4) showcasing:
 1. Google OAuth login flow
 2. Creating and managing goals
 3. Adding and completing milestones
