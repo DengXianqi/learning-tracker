@@ -100,7 +100,7 @@ learning-tracker/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/learning-tracker.git
+   git clone https://github.com/DengXianqi/learning-tracker
    cd learning-tracker
    ```
 
@@ -306,7 +306,7 @@ This project is created for educational purposes as part of a Full-Stack Capston
 
 ## 👤 Author
 
-Your Name - [GitHub](https://github.com/yourusername) | [LinkedIn](https://linkedin.com/in/yourprofile)
+Xianqi Deng - [GitHub](https://github.com/DengXianqi)
 
 ---
 
